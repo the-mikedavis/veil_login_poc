@@ -41,7 +41,8 @@ defmodule One.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:plug_cowboy, "~> 1.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:veil, "~> 0.2"}
     ]
   end
 
