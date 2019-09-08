@@ -21,6 +21,12 @@
         </nav>
         <span class="logo"></span>
       </header>
+      <%= if veil_user_id = assigns[:veil_user_id] do %>
+        Authenticated as <%= veil_user_id %>
+        <a href="<%= session_path(@conn, :delete, @session_unique_id) %>">Sign out</a>
+      <% else %>
+        <a href="<%= user_path(@conn, :new) %>">Sign in</a>
+      <% end %>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
